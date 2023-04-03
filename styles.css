@@ -4,8 +4,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body {
   font-family: "League Spartan", sans-serif;
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -37,21 +35,38 @@ main {
   text-align: center;
   padding: 15px;
   box-shadow: 1px 1px 0 0 rgb(216, 212, 212), -1px -1px 0 0 rgb(216, 212, 212);
+  transition: all 0.5s;
+}
+.btn:hover {
+  box-shadow: 0 0 5px 1px rgb(171, 165, 165);
 }
 .equals {
+  width: 100%;
   background-color: #4d90fe;
   grid-row-start: 2;
   grid-row-end: 6;
   grid-column-start: 4;
   grid-column-end: 5;
+  /* centering = sign */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .equals:hover {
   background-color: rgb(61, 123, 230);
 }
-.display {
-  border: none;
+/* Input Field */
+.input {
+  width: 100%;
   height: 3rem;
+  border: none;
+  padding: 0.7rem;
+  font-size: 1.05rem;
+  font-weight: 600;
   box-shadow: 1px 1px 0 0 rgb(216, 212, 212), -1px -1px 0 0 rgb(216, 212, 212);
+}
+.input:focus {
+  outline: none;
 }
 .operation {
   background-color: rgb(221, 221, 221);
