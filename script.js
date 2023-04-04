@@ -18,3 +18,9 @@ buttons.forEach((btn) => {
     displayField.value = btn.textContent;
   });
 });
+
+//clear button
+document.querySelector(".clear").addEventListener("click", function () {
+  //clear the input field
+  displayField.value = "";
+});
