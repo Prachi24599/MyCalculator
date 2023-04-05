@@ -14,7 +14,7 @@ const evalExpr = function () {
     expression = eval(expression);
     document.querySelector("input").value = expression;
   } catch (e) {
-    console.log("Invalid Operation");
+    //console.log("Invalid Operation");
     clearInput();
   }
 };

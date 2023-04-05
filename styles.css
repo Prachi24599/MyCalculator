@@ -13,11 +13,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 30px;
 }
 main {
   padding: 2rem;
-  width: 30%;
-  height: 60%;
+  /* width: 30%;
+  height: 60%; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +43,6 @@ main {
   box-shadow: 0 0 5px 1px rgb(171, 165, 165);
 }
 .equals {
-  width: 100%;
   background-color: #4d90fe;
   grid-row-start: 2;
   grid-row-end: 6;
