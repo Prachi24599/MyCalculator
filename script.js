@@ -2,20 +2,32 @@
 let expression = "";
 const buttons = document.querySelectorAll(".btn");
 
+//clear the input field
+const clearInput = function () {
+  expression = "";
+  document.querySelector("input").value = expression;
+};
+
+//Evaluate the expression
+const evalExpr = function () {
+  try {
+    expression = eval(expression);
+    document.querySelector("input").value = expression;
+  } catch (e) {
+    console.log("Invalid Operation");
+    clearInput();
+  }
+};
+
 buttons.forEach((btn) => {
   btn.addEventListener("click", function (e) {
     if (e.target.innerHTML === "=") {
-      expression = eval(expression);
-      document.querySelector("input").value = expression;
+      evalExpr();
     } else if (e.target.innerHTML === "C") {
-      //clear the input field
-      expression = "";
-      document.querySelector("input").value = expression;
+      clearInput();
     } else {
-      //add it to input field
       expression += e.target.innerHTML;
       document.querySelector("input").value = expression;
-      //console.log(typeof e.target.innerHTML);
     }
   });
 });
